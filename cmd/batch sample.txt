@@ -1,0 +1,16 @@
+:loop
+choice /t 10 /c ynr /cs /d r /m "Do you want it (Y/N)?"
+if errorlevel 3 goto :loop
+if errorlevel 2 goto :no
+if errorlevel 1 goto :yes
+
+:yes
+@echo Yeah, it will be done.
+GOTO :continue
+
+:no
+@echo Nope, it will not happen.
+GOTO :continue
+
+:continue
+@echo And on we go
