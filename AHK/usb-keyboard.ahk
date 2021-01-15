@@ -38,6 +38,12 @@ return
 ;F7::
 ;F8::
 ;F9::
+<<<<<<< HEAD
 +F3::Run, C:\Program Files\Google\Drive File Stream\44.0.14.0\GoogleDriveFS.exe
 +F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
 +F2::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe
+=======
+F10::Run, C:\Program Files\Google\Drive File Stream\44.0.14.0\GoogleDriveFS.exe
+F11::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
+F12::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe
+>>>>>>> 43fb330f5dbe3870dcf1f6f3d89b2153f8720b6b
