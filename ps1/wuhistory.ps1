@@ -1,0 +1,1 @@
+Get-WUHistory -MaxDate (Get-Date).AddDays(-30) -Last 100
