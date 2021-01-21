@@ -90,37 +90,25 @@ return
 ;---------
 ; Custom
 ;---------
-;:*:rclo::rclone
-:*:rclab::rclone about
-:*:rclcf::rclone config
-:*:rclcp::rclone copy -n -u -P -v --stats=1s
-:*:rclsd::rclone lsd
-:*:rclsl::rclone lsl
-:*:rclrcd::rclone config reconnect dbox-scudzy:
 
-:*:chocou::choco upgrade all -y
-:*:scudzys@y::scudzys@yes.my
-:*:scudzy@g::scudzy@gmail.com
-:*:scudzy@o::scudzy@outlook.com
-:*:scudzy.net::scudzy.net@outlook.com
-:*:scudzy@i::scudzy@icloud.com
-:*:halimi@l::halimi@live.com.my
-:*:halimi@b::halimi@barikatech.com
+:*:`scudzys@y::scudzys@yes.my
+:*:`scudzy@g::scudzy@gmail.com
+:*:`scudzy@o::scudzy@outlook.com
+:*:`scudzy.net::scudzy.net@outlook.com
+:*:`scudzy@i::scudzy@icloud.com
+:*:`halimi@l::halimi@live.com.my
+:*:`halimi@b::halimi@barikatech.com
 
+:*:`addpos::25200
+:*:`addcity::Kuantan
+:*:`addstate::Pahang
+:*:`add1::No 15, Lorong Bukit Setongkol 71
+:*:`add2::Taman LKNP
 
-:*:adbi::adb install -r
-:*:wslshut::wsl --shutdown
+:*:`mhmks::Mohd Halimi B. Mohd Khadri
+:*:`mhmkf::Mohamed Halimi Bin Mohamed Khadri
+:*:`digi014::014-9985814
+:*:`homeadd::No 15, Lorong Bukit Setongkol 71, Taman LKNP, 25200 Kuantan, Pahang.
 
-:*:addpos::25200
-:*:addcity::Kuantan
-:*:addstate::Pahang
-:*:add1::No 15, Lorong Bukit Setongkol 71
-:*:add2::Taman LKNP
-
-:*:mhmks::Mohd Halimi B. Mohd Khadri
-:*:mhmkf::Mohamed Halimi Bin Mohamed Khadri
-:*:digi014::014-9985814
-:*:homeadd::No 15, Lorong Bukit Setongkol 71, Taman LKNP, 25200 Kuantan, Pahang.
-
-:*:mbbwca::Maybank 556093702886
-:*:mbbvisa::4283322042866614
+:*:`mbbwca::Maybank 556093702886
+:*:`mbbvisa::4283322042866614
