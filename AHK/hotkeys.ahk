@@ -81,7 +81,7 @@ Return
 ^Numpad1::Shutdown, 0               ; Logoff
 ^Numpad2::Shutdown, 6               ; Restart & Force
 ^Numpad3::Shutdown, 9               ; Shutdown & Power off
-^Numpad4::Run, D:\Dropbox\Zip\Scripts\AHK\Shutdown-Timer v1.1.ahk       ; Shutdown Timer
+^Numpad4::Run, D:\GitHub\Scripts\AHK\Shutdown-Timer v1.1.ahk       ; Shutdown Timer
 ExitApp
 
 ;  HIDDEN FILES on/off Win + H
