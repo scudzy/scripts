@@ -27,18 +27,3 @@ return
 
 SC163 & Right::Send {End}     ; FN + Right = End
 return
-
-; Launcher F1 - F12
-;F1::
-;F2::
-;F3::
-;F4::
-;F5::
-;F6::
-;F7::
-;F8::
-;F9::
-
-+F3::Run, C:\Program Files\Google\Drive File Stream\44.0.14.0\GoogleDriveFS.exe
-+F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
-+F2::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe

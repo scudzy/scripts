@@ -55,6 +55,18 @@ SendMode Input
 ^!y::Run, c:\Users\scudz\WApps\Weather
 ^!z::Run, C:\Program Files (x86)\Nmap\zenmap.exe
 
+; Launcher F1 - F12
++F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
++F2::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe
++F3::Run, C:\Program Files\Google\Drive File Stream\45.0.12.0\GoogleDriveFS.exe
+;F4::
+;F5::
+;F6::
+;F7::
+;F8::
+;F9::
+
+
 ; Control Panel Ctrl + F1 - F10
 ^F1::Run, C:\Program Files\AutoHotkey\AutoHotkey.chm
 ^F2::Run, control               ; Control Panel
