@@ -3,7 +3,7 @@ rclone config reconnect dbox-scudzy:
 # dropbox
 rclone --exclude-from=d:\files-exc.txt sync 'dbox-scudzy:/' 'G-Drive:/Cloud/Dropbox/' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "Dropbox Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "Dropbox Sync Failed" -ForegroundColor Red -LinesAfter 1
 # onedrive
-rclone --exclude-from=d:\files-exc.txt sync 'one-scudzy:/' 'G-Drive:/Cloud/OneDrive/' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "OneDrive Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "OneDrive Sync Failed" -ForegroundColor Red -LinesAfter 1
+rclone --exclude-from=d:\files-exc.txt sync 'one-scudzy:/' 'G-Drive:/Cloud/OneDrive/' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 --create-empty-src-dirs -u -P -v && Write-Color "OneDrive Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "OneDrive Sync Failed" -ForegroundColor Red -LinesAfter 1
 # d:\apps
 rclone --exclude-from=d:\apps-exc.txt sync 'd:\apps' 'G-Drive:/Garbage/Apps' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Apps Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Apps Sync Failed" -ForegroundColor Red -LinesAfter 1
 # d:\android
