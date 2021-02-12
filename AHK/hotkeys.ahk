@@ -57,7 +57,7 @@ SendMode Input
 
 ; Launcher F1 - F12
 +F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
-+F2::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe
++F2::Run, C:\Users\scudz\AppData\Local\Microsoft\OneDrive\OneDrive.exe
 +F3::Run, C:\Program Files\Google\Drive File Stream\45.0.12.0\GoogleDriveFS.exe
 ;F4::
 ;F5::
