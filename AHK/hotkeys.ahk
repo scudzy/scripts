@@ -27,7 +27,7 @@ SendMode Input
 #z::Run, C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe
 
 ; Apps Launcher [ Ctrl + Alt + ]
-^!a::Run, C:\Program Files (x86)\Acrylic DNS Proxy\AcrylicUI.exe
+^!a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 ^!b::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 ^!c::Run, c:\Users\scudz\WApps\Command Prompt.lnk
 ^!d::Run, C:\Users\scudz\AppData\Local\Hardcoded Software\dupeGuru\dupeguru-win64.exe

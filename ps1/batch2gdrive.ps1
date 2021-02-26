@@ -13,7 +13,7 @@ rclone --exclude-from=d:\android-exc.txt sync 'd:\Android' 'G-Drive:/Garbage/And
 # d:\Documents
 rclone --exclude-from=d:\files-exc.txt sync 'd:\Documents' 'G-Drive:/Garbage/Documents' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Docs Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Docs Sync Failed" -ForegroundColor Red -LinesAfter 1
 # d:\Projects
-rclone --exclude-from=d:\projects-exc.txt sync 'd:\Projects' 'G-Drive:/Garbage/Projects' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Projects Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Projects Sync Failed" -ForegroundColor Red -LinesAfter 1
+#rclone --exclude-from=d:\projects-exc.txt sync 'd:\Projects' 'G-Drive:/Garbage/Projects' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Projects Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Projects Sync Failed" -ForegroundColor Red -LinesAfter 1
 # d:\IconPacks
 #rclone --exclude-from=d:\files-exc.txt sync 'd:\IconsPacks' 'G-Drive:/Garbage/IconsPacks' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 IconsPacks Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 IconsPacks Sync Failed" -ForegroundColor Red -LinesAfter 1
 # Github notes scripts
