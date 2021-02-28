@@ -15,8 +15,8 @@ SendMode Input
 ; GLOBAL HOTKEYS
 ; Apps Launcher [ Win + ] Reserved h, y, l, c, v, e, r, g, q, a,
 #f::Run, C:\Program Files\Mozilla Firefox\firefox.exe
-#j::Run, c:\Users\scudz\WApps\Photos
-#k::Run, c:\Users\scudz\WApps\Mail
+#j::Run, C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+#k::Run, D:\Apps\Portable\KeePass\KeePass.exe
 #n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
 #o::Run, osk.exe
 #s::Run, C:\Program Files\Everything\Everything.exe
