@@ -15,7 +15,7 @@ SendMode Input
 ; GLOBAL HOTKEYS
 ; Apps Launcher [ Win + ] Reserved h, y, l, c, v, e, r, g, q, a,
 #f::Run, C:\Program Files\Mozilla Firefox\firefox.exe
-#j::Run, C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+#j::Run, C:\Program Files\Mozilla Thunderbird\thunderbird.exe
 #k::Run, D:\Apps\Portable\KeePass\KeePass.exe
 #n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
 #o::Run, osk.exe
@@ -58,7 +58,7 @@ SendMode Input
 ; Launcher F1 - F12
 +F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
 +F2::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe
-+F3::Run, C:\Program Files\Google\Drive File Stream\45.0.12.0\GoogleDriveFS.exe
++F3::Run, C:\Program Files\Google\Drive File Stream\46.0.3.0\GoogleDriveFS.exe
 ;F4::
 ;F5::
 ;F6::
