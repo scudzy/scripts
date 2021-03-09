@@ -1,6 +1,6 @@
 @echo off
 SETLOCAL
-color 5f
+rem color 5f
 echo.
 echo    1. Compress without delete the content of BACKUP
 echo    2. Compress ^& delete the content of BACKUP
