@@ -20,23 +20,24 @@ SendMode Input
 #n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
 #o::Run, osk.exe
 #s::Run, C:\Program Files\Everything\Everything.exe
-#t::Run, C:\Program Files\PowerShell\7\pwsh.exe -WorkingDirectory C:\Users\scudz\
-#u::Run, c:\Users\scudz\WApps\Store
-#v::Run, C:\Users\scudz\AppData\Local\Programs\Microsoft VS Code\Code.exe
+#t::Run, C:\Program Files\PowerShell\7\pwsh.exe -WorkingDirectory C:\Users\scudzy\
+#u::Run, c:\users\scudzy\wapps\Microsoft Store.lnk
+#v::Run, C:\Users\scudzy\scoop\apps\vscode\current\Code.exe
 #w::Run, D:\Apps\WinAuth\winauth.exe
 #z::Run, C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe
 
 ; Apps Launcher [ Ctrl + Alt + ]
 ^!a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 ^!b::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-^!c::Run, c:\Users\scudz\WApps\Command Prompt.lnk
-^!d::Run, C:\Users\scudz\AppData\Local\Hardcoded Software\dupeGuru\dupeguru-win64.exe
-^!e::Run, C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe
+^!c::Run, c:\Users\scudzy\WApps\Command Prompt.lnk
+^!cd:Run, c:\users\scudzy\wapps\Photos.lnk
+;^!d::Run, C:\Users\scudzy\AppData\Local\Hardcoded Software\dupeGuru\dupeguru-win64.exe
+;^!e::Run, C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe
 ^!f::Run, C:\Program Files\FreeFileSync\FreeFileSync.exe
 ^!g::Run, D:\Apps\Portable\HandBrake\HandBrake.exe
-^!h::Run, c:\Users\scudz\WApps\Hard Disk Sentinel.lnk
-^!i::Run, c:\Users\scudz\WApps\idm.lnk
-^!j::Run, C:\Program Files\GIMP 2\bin\gimp-2.10.exe
+^!h::Run, c:\Users\scudzy\WApps\Hard Disk Sentinel.lnk
+^!i::Run, C:\Program Files (x86)\Internet Download Manager\IDMan.exe
+;^!j::Run, C:\Program Files\GIMP 2\bin\gimp-2.10.exe
 ;^!k::Run, C:\Program Files\WindowsApps\KaliLinux.54290C8133FEE_1.5.0.0_x64__ey8k8hqnwqnmg\kali.exe
 ^!k::Run, D:\Apps\Portable\deemix-win-x64\deemix-pyweb.exe
 ^!l::Run, D:\Apps\Portable\LosslessCut-win32-x64\LosslessCut.exe
@@ -46,18 +47,18 @@ SendMode Input
 ^!p::Run, D:\Apps\Portable\PApps\Start.exe
 ^!q::Run, C:\Program Files\Process Hacker 2\ProcessHacker.exe
 ^!r::Run, C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe
-^!s::Run, C:\Program Files (x86)\KC Softwares\SUMo\SUMo.exe
+;^!s::Run, C:\Users\scudzy\scoop\apps\sumo\current\SUMo.exe
 ^!t::Run, D:\Apps\Portable\putty\PUTTY.EXE
 ^!u::Run, C:\Program Files\Virtual Machine USB Boot\Virtual Machine USB Boot.x64.exe
 ^!v::Run, C:\Program Files\VideoLAN\VLC\vlc.exe
-^!w::Run, c:\Users\scudz\WApps\Whatsapp
-^!x::Run, C:\Program Files (x86)\Wise\Wise Game Booster\WiseGameBooster.exe
-^!y::Run, c:\Users\scudz\WApps\Weather
-^!z::Run, C:\Program Files (x86)\Nmap\zenmap.exe
+^!w::Run, c:\Users\scudzy\WApps\Whatsapp
+;^!x::Run, C:\Program Files (x86)\Wise\Wise Game Booster\WiseGameBooster.exe
+^!y::Run, c:\Users\scudzy\WApps\Weather
+;^!z::Run, C:\Program Files (x86)\Nmap\zenmap.exe
 
 ; Launcher F1 - F12
 +F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
-+F2::Run, C:\Program Files (x86)\Microsoft OneDrive\OneDrive.exe
++F2::Run, C:\Users\scudzy\AppData\Local\Microsoft\OneDrive\OneDrive.exe
 +F3::Run, C:\Program Files\Google\Drive File Stream\46.0.3.0\GoogleDriveFS.exe
 ;F4::
 ;F5::

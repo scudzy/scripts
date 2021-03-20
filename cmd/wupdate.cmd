@@ -1,11 +1,20 @@
-@echo off
+@ECHO OFF
+echo Simple Script to Reset / Clear Windows Update
+echo.
+PAUSE
+echo.
+attrib -h -r -s %windir%\system32\catroot2
+attrib -h -r -s %windir%\system32\catroot2\*.*
 net stop wuauserv
-net stop cryptSvc
-net stop bits
-net stop msiserver
-Ren C:WindowsSoftwareDistribution SoftwareDistribution.old
-Ren C:WindowsSystem32catroot2 Catroot2.old
+net stop CryptSvc
+net stop BITS
+ren %windir%\system32\catroot2 catroot2.old1
+ren %windir%\SoftwareDistribution sold.old1
+ren "%ALLUSERSPROFILE%\application data\Microsoft\Network\downloader" downloader.old1
+net Start BITS
+net start CryptSvc
 net start wuauserv
-net start cryptSvc
-net start bits
-net start msiserver
+echo.
+echo Task completed successfully...
+echo.
+PAUSE

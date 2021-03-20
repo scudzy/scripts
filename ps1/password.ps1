@@ -1,1 +1,1 @@
-﻿New-Object -TypeName System.Net.NetworkCredential -ArgumentList '', (Get-Content -LiteralPath 'C:\Users\scudz\Password.sec' -Raw | ConvertTo-SecureString) | Select-Object -ExpandProperty Password
+﻿New-Object -TypeName System.Net.NetworkCredential -ArgumentList '', (Get-Content -LiteralPath 'C:\Users\scudzy\Password.sec' -Raw | ConvertTo-SecureString) | Select-Object -ExpandProperty Password
