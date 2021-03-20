@@ -24,7 +24,7 @@ SendMode Input
 #u::Run, c:\users\scudzy\wapps\Microsoft Store.lnk
 #v::Run, C:\Users\scudzy\scoop\apps\vscode\current\Code.exe
 #w::Run, D:\Apps\WinAuth\winauth.exe
-#z::Run, C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe
+#z::Run, c:\Users\scudzy\WApps\Windows Terminal.lnk
 
 ; Apps Launcher [ Ctrl + Alt + ]
 ^!a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
@@ -37,7 +37,7 @@ SendMode Input
 ^!g::Run, D:\Apps\Portable\HandBrake\HandBrake.exe
 ^!h::Run, c:\Users\scudzy\WApps\Hard Disk Sentinel.lnk
 ^!i::Run, C:\Program Files (x86)\Internet Download Manager\IDMan.exe
-;^!j::Run, C:\Program Files\GIMP 2\bin\gimp-2.10.exe
+^!j::Run, C:\Program Files\GIMP 2\bin\gimp-2.10.exe
 ;^!k::Run, C:\Program Files\WindowsApps\KaliLinux.54290C8133FEE_1.5.0.0_x64__ey8k8hqnwqnmg\kali.exe
 ^!k::Run, D:\Apps\Portable\deemix-win-x64\deemix-pyweb.exe
 ^!l::Run, D:\Apps\Portable\LosslessCut-win32-x64\LosslessCut.exe
@@ -47,7 +47,7 @@ SendMode Input
 ^!p::Run, D:\Apps\Portable\PApps\Start.exe
 ^!q::Run, C:\Program Files\Process Hacker 2\ProcessHacker.exe
 ^!r::Run, C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe
-;^!s::Run, C:\Users\scudzy\scoop\apps\sumo\current\SUMo.exe
+^!s::Run, C:\Program Files (x86)\KC Softwares\SUMo\SUMo.exe
 ^!t::Run, D:\Apps\Portable\putty\PUTTY.EXE
 ^!u::Run, C:\Program Files\Virtual Machine USB Boot\Virtual Machine USB Boot.x64.exe
 ^!v::Run, C:\Program Files\VideoLAN\VLC\vlc.exe
