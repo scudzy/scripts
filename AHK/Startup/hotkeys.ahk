@@ -174,3 +174,8 @@ Return
     Send,{Tab}{Space}
     WinClose, A
 return
+
+;#IfWinActive, ahk_exe WindowsTerminal.exe
+;^+1::Send {LCtrl}+{LShift}+{1}
+;return
+
