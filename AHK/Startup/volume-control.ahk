@@ -11,6 +11,7 @@ SetDefaultMouseSpeed, 0
 SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
+Menu, Tray, Icon, D:\IconsPacks\G50\512\vol5_Mac OS X_512x512.ico
 
 #If MouseIsOver("ahk_class Shell_TrayWnd")
    WheelUp::Send {Volume_Up}

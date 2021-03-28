@@ -11,6 +11,8 @@ SetDefaultMouseSpeed, 0
 SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
+Menu, Tray, Icon, D:\IconsPacks\59x60\Chrome.ico
+
 
 ; Google Search highlighted text [ Ctrl + Shift + j ]
 #IfWinActive ahk_class Chrome_WidgetWin_1
