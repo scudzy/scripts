@@ -1,1 +1,1 @@
-(Invoke-WebRequest ifconfig.me/ip).Content.Trim()
+dig +short myip.opendns.com '@resolver1.opendns.com'
