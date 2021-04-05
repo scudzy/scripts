@@ -11,7 +11,7 @@ SetDefaultMouseSpeed, 0
 SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
-Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\Device Keyboard.ico
+Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\device keyboard.ico
 
 ; Remap Key
 RAlt::AppsKey                   ; Right Alt = Apps Key

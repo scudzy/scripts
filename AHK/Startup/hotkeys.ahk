@@ -11,7 +11,7 @@ SetDefaultMouseSpeed, 0
 SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
-Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\Device Sound.ico
+Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 
 ; GLOBAL HOTKEYS
 ; Apps Launcher [ Win + ] Reserved h, y, l, c, v, e, r, g, q, a,

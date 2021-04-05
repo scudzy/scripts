@@ -11,7 +11,7 @@ SetDefaultMouseSpeed, 0
 SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
-Menu, Tray, Icon, D:\IconsPacks\59x60\Chrome.ico
+Menu, Tray, Icon, D:\IconsPacks\G50\File\Browser\ie.ico
 
 
 ; Google Search highlighted text [ Ctrl + Shift + j ]

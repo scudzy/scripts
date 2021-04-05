@@ -14,7 +14,7 @@ SetDefaultMouseSpeed, 0
 SetWinDelay, -1
 SetControlDelay, -1
 SendMode Input
-Menu, Tray, Icon, D:\IconsPacks\G50\filetypes\ahk.ico
+Menu, Tray, Icon, D:\IconsPacks\G50\simple\mac dictionary.ico
 
 ;------------------------------------------------------------------------------
 ; AUto-COrrect TWo COnsecutive CApitals.
