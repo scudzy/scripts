@@ -21,15 +21,15 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
 #o::Run, osk.exe
 #s::Run, C:\Program Files\Everything\Everything.exe
-#t::Run, C:\Program Files\PowerShell\7\pwsh.exe -WorkingDirectory C:\Users\scudzy\
+#t::Run, c:\Users\scudzy\WApps\Windows Terminal.lnk
 #u::Run, c:\users\scudzy\wapps\Microsoft Store.lnk
 #v::Run, C:\Users\scudzy\scoop\apps\vscode\current\Code.exe
 #w::Run, D:\Apps\WinAuth\winauth.exe
-#z::Run, c:\Users\scudzy\WApps\Windows Terminal.lnk
+#z::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 
 ; Apps Launcher [ Ctrl + Alt + ]
 ^!a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
-^!b::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+;^!b::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 ^!c::Run, c:\Users\scudzy\WApps\Command Prompt.lnk
 ^!d::Run, C:\Program Files (x86)\Ditto\Ditto.exe
 ^!e::Run, C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe
