@@ -1,2 +1,0 @@
-python3 D:\Github\py\compress-videos-ts.py --recursive --file-ext=mp4 
-python3 D:\Github\py\compress-videos-x265.py --recursive --file-ext=mp4 
