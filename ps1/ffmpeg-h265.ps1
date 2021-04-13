@@ -37,7 +37,7 @@
 
 
 #Set Global Variables used in the script
-$path ='C:\Program Files\FFmpeg\'
+$path ='C:\ProgramData\chocolatey\lib\ffmpeg\tools\ffmpeg'
 $storage = 0
 $storagestart = 0
 $storageend = 0
@@ -151,7 +151,7 @@ if(Test-Path $fpath){
             Write-Log -Level DEBUG -Message "Setting temporary file name for converted file: $compressedFile" -logfile $Logfile
 
         #Command to run FFMpeg to compress video files (feel free to change this to your desired settings if necessary)
-        & "C:\Program Files\FFmpeg\bin\ffmpeg.exe" -i $file.Fullname -vcodec libx265 -crf 28 "$compressedFile"
+        & "C:\ProgramData\chocolatey\lib\ffmpeg\tools\ffmpeg\bin\ffmpeg.exe" -i $file.Fullname -vcodec libx265 -crf 28 "$compressedFile"
             Write-Log -Level DEBUG -Message "Compression complete for $compressedFile" -logfile $Logfile
 
         (Get-Item $compressedFile).LastWriteTime = (Get-Item $file.FullName).LastWriteTime
