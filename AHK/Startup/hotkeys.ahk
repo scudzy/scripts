@@ -24,7 +24,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #t::Run, c:\Users\scudzy\WApps\Windows Terminal.lnk
 #u::Run, c:\users\scudzy\wapps\Microsoft Store.lnk
 #v::Run, C:\Users\scudzy\scoop\apps\vscode\current\Code.exe
-#w::Run, D:\Apps\WinAuth\winauth.exe
+#w::Run, D:\Apps\Portable\freetube\FreeTube.exe
 #z::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 
 ; Apps Launcher [ Ctrl + Alt + ]
@@ -53,7 +53,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #^w::Run, c:\Users\scudzy\WApps\Whatsapp
 ;#^x::Run, C:\Program Files (x86)\Wise\Wise Game Booster\WiseGameBooster.exe
 #^y::Run, c:\Users\scudzy\WApps\Weather
-;#^z::Run, C:\Program Files (x86)\Nmap\zenmap.exe
+#^z::Run, C:\Users\scudzy\AppData\Local\Programs\LNV\Stremio-4\stremio.exe
 
 ; [Ctrl + Shift + ]
 ; Launcher F1 - F12
