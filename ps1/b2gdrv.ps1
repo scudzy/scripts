@@ -1,23 +1,33 @@
-Write-Color "Checking Dropbox Access Token" -ForegroundColor Cyan -LinesAfter 1 -LinesBefore 1
-rclone config reconnect dbox-scudzy:
+#Write-Color -Text "Checking Dropbox Access Token" -Color Cyan -LinesAfter 1 -LinesBefore 1
+#rclone config reconnect dbox-scudzy:
 # dropbox
-rclone --exclude-from=d:\files-exc.txt sync 'dbox-scudzy:' 'G-Drive:/Cloud/Dropbox' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "Dropbox Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "Dropbox Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Dropbox" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\files-exc.txt sync 'D:\Dropbox' 'G-Drive:/Cloud/Dropbox' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "Dropbox Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "Dropbox Sync Failed" -Color DarkRed -LinesAfter 1
 # onedrive
-rclone --exclude-from=d:\files-exc.txt sync 'one-scudzy:' 'G-Drive:/Cloud/OneDrive' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 --create-empty-src-dirs -u -P -v && Write-Color "OneDrive Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "OneDrive Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing OneDrive" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\files-exc.txt sync 'D:\OneDrive' 'G-Drive:/Cloud/OneDrive' --track-renames --checkers=16 --transfers=16--stats=1s --tpslimit=10 --tpslimit-burst=10 --create-empty-src-dirs -u -P -v && Write-Color -Text "OneDrive Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "OneDrive Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\apps
-rclone --exclude-from=d:\apps-exc.txt sync 'd:\apps' 'G-Drive:/Garbage/Apps' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Apps Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Apps Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Apps" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\apps-exc.txt sync 'D:\Apps' 'G-Drive:/Garbage/Apps' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Apps Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Apps Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\android
-rclone --exclude-from=d:\android-exc.txt sync 'd:\Android' 'G-Drive:/Garbage/Android' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Android Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Android Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Android" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\android-exc.txt sync 'D:\Android' 'G-Drive:/Garbage/Android' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Android Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Android Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\music
-rclone --exclude-from=d:\music-exc.txt sync 'd:\Music' 'G-Drive:/Garbage/Music' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Music Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Music Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Music" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\music-exc.txt sync 'D:\Music' 'G-Drive:/Garbage/Music' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Music Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Music Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\Documents
-rclone --exclude-from=d:\files-exc.txt sync 'd:\Documents' 'G-Drive:/Garbage/Documents' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Docs Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Docs Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Documents" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\files-exc.txt sync 'D:\Documents' 'G-Drive:/Garbage/Documents' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Docs Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Docs Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\Projects
-rclone --exclude-from=d:\projects-exc.txt sync 'd:\Projects' 'G-Drive:/Garbage/Projects' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Projects Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Projects Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Projects" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\projects-exc.txt sync 'D:\Projects' 'G-Drive:/Garbage/Projects' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Projects Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Projects Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\IconPacks
-rclone --exclude-from=d:\files-exc.txt sync 'd:\IconsPacks' 'G-Drive:/Garbage/IconsPacks' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 IconsPacks Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 IconsPacks Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing IconPacks" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\files-exc.txt sync 'D:\IconsPacks' 'G-Drive:/Garbage/IconsPacks' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 IconsPacks Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 IconsPacks Sync Failed" -Color DarkRed -LinesAfter 1
 # Github notes scripts
-rclone --exclude-from=d:\files-exc.txt sync 'd:\Github' 'G-Drive:/Garbage/Github' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 Github Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 Github Sync Failed" -ForegroundColor Red -LinesAfter 1
+Write-Color -Text "Syncing Github" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\files-exc.txt sync 'D:\Github' 'G-Drive:/Garbage/Github' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Github Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Github Sync Failed" -Color DarkRed -LinesAfter 1
 #SnappyDriverInstaller
-rclone --exclude-from=d:\files-exc.txt sync 'D:\SnappyDriverInstaller' 'G-Drive:/Garbage/Drivers/SnappyDriverInstaller' --transfers=8 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color "G50 SnappyDriverInstaller Sync Completed" -ForegroundColor Green -LinesAfter 1 || Write-Color "G50 SnappyDriverInstaller Sync Failed" -ForegroundColor Red -LinesAfter 1
-Write-Color "Synchronization completed" -ForegroundColor Blue -LinesAfter 1
+Write-Color -Text "Syncing SnappyDriverInstaller" -Color Yellow -LinesAfter 1 -LinesBefore 1
+rclone --exclude-from=d:\files-exc.txt sync 'D:\SnappyDriverInstaller' 'G-Drive:/Garbage/Drivers/SnappyDriverInstaller' --track-renames --checkers=16 --transfers=16 --stats=1s --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 SnappyDriverInstaller Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 SnappyDriverInstaller Sync Failed" -Color DarkRed -LinesAfter 1
+Write-Color -Text "Synchronization completed" -Color Blue -LinesAfter 1
