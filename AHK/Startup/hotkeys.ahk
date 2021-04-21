@@ -27,7 +27,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #w::Run, D:\Apps\Portable\freetube\FreeTube.exe
 #z::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 
-; Apps Launcher [ Ctrl + Alt + ]
+; Apps Launcher [ Win + Ctrl + ]
 #^a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 ;#^b::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 #^c::Run, c:\Users\scudzy\WApps\Command Prompt.lnk
@@ -55,7 +55,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #^y::Run, c:\Users\scudzy\WApps\Weather
 #^z::Run, C:\Users\scudzy\AppData\Local\Programs\LNV\Stremio-4\stremio.exe
 
-; [Ctrl + Shift + ]
+; [ Ctrl + Shift + ]
 ; Launcher F1 - F12
 ^+F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
 ^+F2::Run, C:\Users\scudzy\AppData\Local\Microsoft\OneDrive\OneDrive.exe
