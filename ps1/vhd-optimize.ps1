@@ -1,1 +1,1 @@
-wsl --shutdown && Optimize-VHD -Path C:\Users\scudz\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\ext4.vhdx -Mode Full
+wsl --shutdown && Optimize-VHD -Path C:\Users\scudzy\AppData\Local\Packages\TheDebianProject.DebianGNULinux_76v4gfsz19hv4\LocalState\ext4.vhdx -Mode Full
