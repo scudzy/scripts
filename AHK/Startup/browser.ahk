@@ -20,7 +20,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\File\Browser\ie.ico
      {
      Send, ^c
      DllCall("Sleep","UInt",16.1)
-     Run, https://www.google.com/search?q=%clipboard%+jav
+     Run, https://duckduckgo.com/?q=%clipboard%+jav
      }
 Return
 
