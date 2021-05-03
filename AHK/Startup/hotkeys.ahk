@@ -15,7 +15,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 
 ; GLOBAL HOTKEYS
 ; Apps Launcher [ Win + ] Reserved h, y, l, c, v, e, r, g, q, a,
-#f::Run, C:\Program Files\Mozilla Firefox\firefox.exe
+;vf::Run, C:\Program Files\Mozilla Firefox\firefox.exe
 #j::Run, C:\Program Files\Mozilla Thunderbird\thunderbird.exe
 #k::Run, D:\Apps\Portable\KeePass\KeePass.exe
 #n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
