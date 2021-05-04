@@ -78,7 +78,7 @@ if (-Not (Test-Path $helpPath)) {
 
 #install Platyps if not found
 if (-Not (Get-Module Platyps -ListAvailable)) {
-    Write-Host "Installing the required Platyps module from the PowerShell Gallery" -ForegroundColor Yellow
+    Write-Output "Installing the required Platyps module from the PowerShell Gallery" -ForegroundColor Yellow
     Try {
         Install-Module Platyps -force -errorAction Stop
     }
@@ -192,7 +192,7 @@ if ($topics) {
         Write-Verbose "Cleaning up temporary download folder"
         Remove-Item -Path $destPath -Recurse -Force
     }
-    Write-Host "You might need to start a new PowerShell session to see the new help." -ForegroundColor Green
+    Write-Output "You might need to start a new PowerShell session to see the new help." -ForegroundColor Green
 }
 else {
     Write-Warning "No about topics found"

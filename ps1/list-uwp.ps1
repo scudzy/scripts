@@ -1,1 +1,1 @@
-Get-AppxPackage -AllUsers | Select Name, PackageFullName
+powershell.exe -Command { Get-AppxPackage -AllUsers | Select-Object Name, PackageFullName }

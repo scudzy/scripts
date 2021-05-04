@@ -32,29 +32,29 @@ V1.20, 11/13/2017 - Fixed environment variables
 
 $arch = Get-WMIObject -Class Win32_Processor -ComputerName LocalHost | Select-Object AddressWidth
 
-Write-Host "1. Stopping Windows Update Services..."
+Write-Output "1. Stopping Windows Update Services..."
 Stop-Service -Name BITS
 Stop-Service -Name wuauserv
 Stop-Service -Name appidsvc
 Stop-Service -Name cryptsvc
 
-Write-Host "2. Remove QMGR Data file..."
+Write-Output "2. Remove QMGR Data file..."
 Remove-Item "$env:allusersprofile\Application Data\Microsoft\Network\Downloader\qmgr*.dat" -ErrorAction SilentlyContinue
 
-Write-Host "3. Renaming the Software Distribution and CatRoot Folder..."
+Write-Output "3. Renaming the Software Distribution and CatRoot Folder..."
 Rename-Item $env:systemroot\SoftwareDistribution SoftwareDistribution.bak -ErrorAction SilentlyContinue
 Rename-Item $env:systemroot\System32\Catroot2 catroot2.bak -ErrorAction SilentlyContinue
 
-Write-Host "4. Removing old Windows Update log..."
+Write-Output "4. Removing old Windows Update log..."
 Remove-Item $env:systemroot\WindowsUpdate.log -ErrorAction SilentlyContinue
 
-Write-Host "5. Resetting the Windows Update Services to defualt settings..."
+Write-Output "5. Resetting the Windows Update Services to defualt settings..."
 "sc.exe sdset bits D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)"
 "sc.exe sdset wuauserv D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)"
 
 Set-Location $env:systemroot\system32
 
-Write-Host "6. Registering some DLLs..."
+Write-Output "6. Registering some DLLs..."
 regsvr32.exe /s atl.dll
 regsvr32.exe /s urlmon.dll
 regsvr32.exe /s mshtml.dll
@@ -92,19 +92,19 @@ regsvr32.exe /s wucltux.dll
 regsvr32.exe /s muweb.dll
 regsvr32.exe /s wuwebv.dll
 
-Write-Host "7) Removing WSUS client settings..."
+Write-Output "7) Removing WSUS client settings..."
 REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate" /v AccountDomainSid /f
 REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate" /v PingID /f
 REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate" /v SusClientId /f
 
-Write-Host "8) Resetting the WinSock..."
+Write-Output "8) Resetting the WinSock..."
 netsh winsock reset
 netsh winhttp reset proxy
 
-Write-Host "9) Delete all BITS jobs..."
+Write-Output "9) Delete all BITS jobs..."
 Get-BitsTransfer | Remove-BitsTransfer
 
-Write-Host "10) Attempting to install the Windows Update Agent..."
+Write-Output "10) Attempting to install the Windows Update Agent..."
 if($arch -eq 64){
     wusa Windows8-RT-KB2937636-x64 /quiet
 }
@@ -112,13 +112,13 @@ else{
     wusa Windows8-RT-KB2937636-x86 /quiet
 }
 
-Write-Host "11) Starting Windows Update Services..."
+Write-Output "11) Starting Windows Update Services..."
 Start-Service -Name BITS
 Start-Service -Name wuauserv
 Start-Service -Name appidsvc
 Start-Service -Name cryptsvc
 
-Write-Host "12) Forcing discovery..."
+Write-Output "12) Forcing discovery..."
 wuauclt /resetauthorization /detectnow
 
-Write-Host "Process complete. Please reboot your computer."
+Write-Output "Process complete. Please reboot your computer."

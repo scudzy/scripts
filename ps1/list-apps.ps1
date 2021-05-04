@@ -1,1 +1,1 @@
-Get-WmiObject -Class Win32_Product
+Get-CimInstance win32_product | Select-Object Name, PackageName, InstallDate | Out-GridView

@@ -131,7 +131,7 @@ if (!(test-path "$path\Logs")){
   }
 
 #Start appending to the log file
-$Logfile = "$path\Logs\$(gc env:computername)_VideoCompressions.log"
+$Logfile = "$path\Logs\$(Get-Content env:computername)_VideoCompressions.log"
 Write-Log -Level INFO -Message "." -logfile $Logfile
 Write-Log -Level INFO -Message "********************" -logfile $Logfile
 Write-Log -Level INFO -Message "SCRIPT RUN ON:" -logfile $Logfile
@@ -193,7 +193,7 @@ if(Test-Path $fpath){
     Write-Log -Level INFO -Message "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" -logfile $Logfile
     Write-Log -Level INFO -Message "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" -logfile $Logfile
 } else {
-    Write-Host "INVALID PATH" -ForegroundColor Red
+    Write-Output "INVALID PATH" -ForegroundColor Red
         Write-Log -Level FATAL -Message "INVALID File path. $fpath does not exist. Exiting" -logfile $Logfile
         }
 #Open log file upon completion of the script

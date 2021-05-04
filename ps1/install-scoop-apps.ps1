@@ -1,3 +1,3 @@
 # install apps from scoop-apps.txt
-$apps = gc scoop-apps.txt
+$apps = Get-Content scoop-apps.txt
 scoop install @apps
