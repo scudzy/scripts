@@ -12,5 +12,5 @@ run_install()
 
 packagesnames=("fzf" "tio" "neofetch" "zsh" "vim" "ffmpeg" "python3-pip" "vim-gtk" "tmux" "git" "curl" "htop" "shellcheck" "ripgrep" "pass" "dos2unix" "sysbench" "inxi" "fontconfig" "jq" "pwgen" "unzip" "rclone")
 
-## Run the run_install function if sany of the libraries are missing
-dpkg -s "${packagesnames[@]}" >/dev/null 2>&1 || run_install
+## Run the run_install function if any of the libraries are missing
+sudo dpkg -s "${packagesnames[@]}" >/dev/null 2>&1 || run_install
