@@ -15,7 +15,7 @@ if (Get-Item -Path $file -ErrorAction Ignore) {
         }
         ## Move the existing file to the archive.
         Move-Item -Path $file -Destination $archiveFolder -Force -ErrorAction STOP
-        Write-Host "The old file [$file] has been archived to [$archiveFolder]"
+        Write-Output "The old file [$file] has been archived to [$archiveFolder]"
      } catch {
         throw $_.Exception.Message
      }
@@ -23,7 +23,7 @@ if (Get-Item -Path $file -ErrorAction Ignore) {
  Create the new file
  try {
      $null = New-Item -ItemType File -Path $file -Force -ErrorAction Stop
-     Write-Host "The new file [$file] has been created."
+     Write-Output "The new file [$file] has been created."
  } catch {
-    Write-Host $_.Exception.Message
+    Write-Output $_.Exception.Message
  }
