@@ -59,7 +59,7 @@ function notes { Set-Location D:\Github\Notes\ }
 function scripts { Set-Location D:\Github\Scripts\ }
 function wttr { Invoke-RestMethod 'http://wttr.in/Kuantan, Malaysia?0qTm' }
 function wttr4 { Invoke-RestMethod 'http://wttr.in/Kuantan, Malaysia?m0Fq&format=4' }
-function wsls { wsl --shutdown }
+function wsls { wsl -e genie -u; wsl --shutdown }
 function wslreboot { Get-Service LxssManager | Restart-Service }
 
 function find ($string) { 
@@ -121,3 +121,14 @@ Set-Alias -Name umo -Value Uninstall-Module
 Set-Alias -Name gimo -Value Get-InstalledModule
 Set-Alias -Name ggs -Value Get-GitStatus
 Set-Alias -Name umof -Value Update-Module -Force 
+
+function delete2rbin () {
+    ForEach ($argument in $args) {
+        $paths = Get-ChildItem -Path "$argument"
+        $shell = New-Object -ComObject 'Shell.Application'
+        ForEach ($path in $paths)
+        {
+            $shell.NameSpace(0).ParseName($path.FullName).InvokeVerb('delete')
+        }
+    }
+}
