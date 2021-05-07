@@ -122,13 +122,16 @@ Set-Alias -Name gimo -Value Get-InstalledModule
 Set-Alias -Name ggs -Value Get-GitStatus
 Set-Alias -Name umof -Value Update-Module -Force 
 
-function delete2rbin () {
-    ForEach ($argument in $args) {
-        $paths = Get-ChildItem -Path "$argument"
-        $shell = New-Object -ComObject 'Shell.Application'
-        ForEach ($path in $paths)
-        {
-            $shell.NameSpace(0).ParseName($path.FullName).InvokeVerb('delete')
-        }
+Function Send-ToRecycleBin () {
+    Param(
+    [Parameter(Mandatory = $true,
+    ValueFromPipeline = $true)]
+    [alias('FullName')]
+    [string]$FilePath
+    )
+    Begin{$shell = New-Object -ComObject 'Shell.Application'}
+    Process{
+    $Item = Get-Item $FilePath
+    $shell.namespace(0).ParseName($item.FullName).InvokeVerb('delete')
     }
 }
