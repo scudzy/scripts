@@ -10,8 +10,8 @@ function lsa { Get-ChildItem -Path . -Force @Args }
 function lsm { Get-ChildItem | sort -property LastWriteTime }
 function dirall { Get-ChildItem -Recurse | ?{ $_.PSIsContainer } | Select-Object FullName }
 function ompv { oh-my-posh.exe -version }
-function dieth { Disable-NetAdapter -Name "Ethernet" -ConfInvoke-RestMethod:$false }
-function eneth { Enable-NetAdapter -Name "Ethernet" -ConfInvoke-RestMethod:$false }
+function dieth { Get-NetAdapter | Disable-NetAdapter -Confirm:$false }
+function eneth { Get-NetAdapter | Enable-NetAdapter -Confirm:$false }
 function speed { speedtest --selection-details -v }
 function gfunc { Get-ChildItem function:\ }
 function galias { Get-ChildItem alias:\ }
