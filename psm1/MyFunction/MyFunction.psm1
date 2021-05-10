@@ -38,8 +38,8 @@ function gitlgg { git log --graph --abbrev-commit --decorate --date=relative --f
 function seno { Get-CimInstance win32_bios | select SerialNumber }
 function bios { Get-CimInstance win32_bios | format-list * }
 function ip3 { iperf3 -s 192.168.1.120 }
-function scomp { powershell.exe -Command { scoop update oh-my-posh } }
-function scu { powershell.exe -Command { scoop update @Args } }
+function scomp { sudo scoop update oh-my-posh }
+function scu { sudo scoop update @Args }
 function gcma { Get-Command -CommandType All -Module @Args }
 function gcmaa { Get-Command -CommandType Alias -Module @Args }
 function gcmf { Get-Command -CommandType Function -Module @Args }
@@ -52,7 +52,7 @@ function path {$ENV:PATH}                                                   # Pa
 function cd32 { Set-Location C:\Windows\System32 }                          # CD to System32 Directory
 function src { . $profile }                                                 # Reload PowerShell
 function chocou { choco upgrade all -y }
-function csu { powershell.exe -Command { choco upgrade all -y; scoop update; scoop status } }
+function csu { powershell.exe -Command { choco upgrade all -y; sudo scoop update; sudo scoop status } }
 function ddown {Set-Location D:\Downloads\}
 function cdst3 { Set-Location 'C:\Users\scudzy\AppData\Roaming\Sublime Text 3\Packages\User\' }
 function notes { Set-Location D:\Github\Notes\ }
@@ -61,27 +61,28 @@ function wttr { Invoke-RestMethod 'http://wttr.in/Kuantan, Malaysia?0qTm' }
 function wttr4 { Invoke-RestMethod 'http://wttr.in/Kuantan, Malaysia?m0Fq&format=4' }
 function wsls { wsl -e genie -u; wsl --shutdown }
 function wslreboot { Get-Service LxssManager | Restart-Service }
+function takeover { powershell.exe -executionpolicy bypass -file "D:\Github\Scripts\ps1\TakeOwnership.ps1" -FilesFolders $Args }
 
-function find ($string) { 
-    $env:path.Split(';') | select -Unique | ? {$_ -and (test-path $_)} | gci -Filter $string; 
+function ffind ($string) {
+    $env:path.Split(';') | select -Unique | ? {$_ -and (test-path $_)} | Get-ChildItem -Filter $string;
 }
 
-function whereis ($string) { 
+function whereis ($string) {
     $superpath = "$env:Path;C:\Program Files;C:\Program Files (x86);C:\Users\scudzy";
-    (echo $superpath).Split(';') | Get-ChildItem -Recurse -Filter $string; 
+    (echo $superpath).Split(';') | Get-ChildItem -Recurse -Filter $string;
 }
 
 # Home directory
-function homescudzy { Set-Location $HOME }
-Set-Alias ~ homescudzy
+function scudzy { Set-Location "$HOME" }
+Set-Alias -Name ~ -Value scudzy
 
 # Update-Help work around
-function updatehelp { Update-Help -Verbose -ErrorAction SilentlyContinue -ErrorVariable UpdateErrors -UICulture en-US }
-Set-Alias uhlp updatehelp
+function Get-UdateHelp { Update-Help -Verbose -ErrorAction SilentlyContinue -ErrorVariable UpdateErrors -UICulture en-US }
+Set-Alias uhlp Get-UdateHelp
 
 # List Env
-function allenv { Get-Childitem -Path Env:* | Sort-Object Name }
-Set-Alias envall allenv
+function printenv { Get-Childitem -Path Env:* | Sort-Object Name }
+Set-Alias env printenv
 
 # Rclone about G-Drive:
 function rclonegdrive { rclone about G-Drive:; Write-Color -Text "Google Drive scudzys@yes.my" -Color DarkBlue -LinesAfter 1 -LinesBefore 1 }
@@ -120,7 +121,8 @@ Set-Alias -Name edit -Value "C:\Program Files\Sublime Text 3\sublime_text.exe"
 Set-Alias -Name umo -Value Uninstall-Module
 Set-Alias -Name gimo -Value Get-InstalledModule
 Set-Alias -Name ggs -Value Get-GitStatus
-Set-Alias -Name umof -Value Update-Module -Force 
+Set-Alias -Name umof -Value Update-Module -Force
+Set-Alias -Name gvb -Value Get-Verb
 
 Function Send-ToRecycleBin () {
     Param(
@@ -135,3 +137,15 @@ Function Send-ToRecycleBin () {
     $shell.namespace(0).ParseName($item.FullName).InvokeVerb('delete')
     }
 }
+
+# recycle bin
+function Clear-RecycleBin() {
+    $site = Get-SPSite http://your.portal.url/site_collection
+    Write-Host "Items in recycle bin:" $site.RecycleBin.Count
+    $site.RecycleBin.DeleteAll()
+}
+
+Set-Alias -Name crb -Value Clear-RecycleBin -Option AllScope
+Set-Alias -Name rm -Value Send-ToRecycleBin -Option AllScope
+
+function efunc { subl d:\Github\Scripts\psm1\MyFunction\Myfunction.psm1 | subl d:\Github\Scripts\psm1\MyFunction\Myfunction.psd1 }
