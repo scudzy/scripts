@@ -8,9 +8,9 @@ attrib -h -r -s %windir%\system32\catroot2\*.*
 net stop wuauserv
 net stop CryptSvc
 net stop BITS
-ren %windir%\system32\catroot2 catroot2.old1
-ren %windir%\SoftwareDistribution sold.old1
-ren "%ALLUSERSPROFILE%\application data\Microsoft\Network\downloader" downloader.old1
+ren %windir%\system32\catroot2 catroot2.old12
+ren %windir%\SoftwareDistribution sold.old12
+ren "%ALLUSERSPROFILE%\application data\Microsoft\Network\downloader" downloader.old12
 net Start BITS
 net start CryptSvc
 net start wuauserv
