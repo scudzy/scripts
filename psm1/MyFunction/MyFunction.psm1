@@ -77,8 +77,8 @@ function scudzy { Set-Location "$HOME" }
 Set-Alias -Name ~ -Value scudzy
 
 # Update-Help work around
-function Get-UdateHelp { Update-Help -Verbose -ErrorAction SilentlyContinue -ErrorVariable UpdateErrors -UICulture en-US }
-Set-Alias uhlp Get-UdateHelp
+function UpdateHelp { Update-Help -Verbose -ErrorAction SilentlyContinue -ErrorVariable UpdateErrors -UICulture en-US }
+Set-Alias uhlp UpdateHelp
 
 # List Env
 function printenv { Get-Childitem -Path Env:* | Sort-Object Name }

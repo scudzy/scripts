@@ -48,25 +48,25 @@ PowerShellVersion = '5.0'
 
 # Modules that must be imported into the global environment prior to importing this module
 #RequiredModules = @( 'PowerColorLS' )
-RequiredModules   = @(                          
+RequiredModules   = @(
                            @{
-                            ModuleName = 'PSWriteColor'; 
-                            ModuleVersion = '0.87.3'; 
+                            ModuleName = 'PSWriteColor';
+                            ModuleVersion = '0.87.3';
                             Guid = '0b0ba5c5-ec85-4c2b-a718-874e55a8bc3f'
                            },
                            @{
-                            ModuleName = 'Terminal-Icons'; 
-                            ModuleVersion = '0.5.0'; 
+                            ModuleName = 'Terminal-Icons';
+                            ModuleVersion = '0.5.0';
                             Guid = '4419ddb6-3528-47cd-baf3-7fb9d8566620'
                            },
                            @{
-                            ModuleName = 'PowerColorLS'; 
-                            ModuleVersion = '1.0.2'; 
+                            ModuleName = 'PowerColorLS';
+                            ModuleVersion = '1.0.2';
                             Guid = 'a6467844-8562-42c6-adf1-bab76c2a8a9f'
                            },
                            @{
-                            ModuleName = 'WslInterop'; 
-                            ModuleVersion = '0.3.0'; 
+                            ModuleName = 'WslInterop';
+                            ModuleVersion = '0.3.0';
                             Guid = 'b3b24408-16df-432e-8587-45c230e9b8c2'
                            }
                     )
@@ -156,7 +156,7 @@ FunctionsToExport = @(
     'ffind',
     'whereis',
     'scudzy',
-    'Get-UpdateHelp',
+    'UpdateHelp',
     'printenv',
     'rclonegdrive',
     'rclonedbox',
@@ -171,7 +171,7 @@ FunctionsToExport = @(
     'Send-ToRecycleBin',
     'takeover',
     'Clear-RecycleBin',
-    'efunc'    
+    'efunc'
 )
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
