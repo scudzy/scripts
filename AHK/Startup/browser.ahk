@@ -14,9 +14,9 @@ SendMode Input
 Menu, Tray, Icon, D:\IconsPacks\G50\File\Browser\ie.ico
 
 
-; Google Search highlighted text [ Ctrl + Shift + j ]
+; Google Search highlighted text [ Alt + Shift + j ]
 #IfWinActive ahk_class Chrome_WidgetWin_1
-^+j::
+!+j::
      {
      Send, ^c
      DllCall("Sleep","UInt",16.1)
@@ -24,7 +24,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\File\Browser\ie.ico
      }
 Return
 
-; Edge Restart
+; Edge Restart [ Alt + Shift + r ]
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 !+r::
     DllCall("Sleep","UInt",1000)
@@ -32,7 +32,7 @@ Return
     Click, 89, 94
 return
 
-; Edge url hotkeys
+; Edge url hotkeys [ Alt + f / r / y ]
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 OpenURL(u) {
     WinActivate, Program Manager
@@ -44,7 +44,7 @@ OpenURL(u) {
 !y::OpenURL("https://www.youtube.com/")
 return
 
-; Edge Home
+; Edge Home [ Alt + Home ]
 #IfWinActive, ahk_class Chrome_WidgetWin_1
-!h::Send !{Home}        ; Alt + Home
+!h::Send !{Home}
 return

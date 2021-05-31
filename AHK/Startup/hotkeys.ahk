@@ -46,7 +46,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 ;^!+o::Run, C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
 ^!+p::Run, D:\Apps\Portable\PApps\Start.exe
 ^!+q::Run, C:\Program Files\Process Hacker 2\ProcessHacker.exe
-^!+r::Run, C:\Program Files\VS Revo Group\Revo Uninstaller Pro\RevoUninPro.exe
+^!+r::Run, D:\Apps\Portable\Revo.Uninstaller.Pro.4.4.5\RevoUPPort.exe
 ^!+s::Run, C:\Program Files (x86)\KC Softwares\SUMo\SUMo.exe
 ^!+t::Run, D:\Apps\Portable\putty\PUTTY.EXE
 ;^!+u::Run, C:\Program Files\Virtual Machine USB Boot\Virtual Machine USB Boot.x64.exe
@@ -60,7 +60,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 ; Launcher F1 - F12
 ^+F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
 ^+F2::Run, C:\Users\scudzy\AppData\Local\Microsoft\OneDrive\OneDrive.exe
-^+F3::Run, C:\Program Files\Google\Drive File Stream\46.0.3.0\GoogleDriveFS.exe
+^+F3::Run, C:\Program Files\Google\Drive File Stream\48.0.13.0\GoogleDriveFS.exe
 ;F4::
 ;F5::
 ;F6::
