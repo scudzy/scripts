@@ -5,7 +5,7 @@ Write-Color -Text "Syncing Dropbox" -Color Yellow -LinesAfter 1 -LinesBefore 1
 rclone --exclude-from=d:\files-exc.txt sync 'D:\Dropbox' 'G-Drive:/Cloud/Dropbox' --fast-list --track-renames --checkers=16 --transfers=16 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "Dropbox Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "Dropbox Sync Failed" -Color DarkRed -LinesAfter 1
 # onedrive
 Write-Color -Text "Syncing OneDrive" -Color Yellow -LinesAfter 1
-rclone --exclude-from=d:\files-exc.txt copy 'D:\OneDrive' 'G-Drive:/Cloud/OneDrive' --fast-list --track-renames --checkers=16 --transfers=16 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 --create-empty-src-dirs -u -P -v && Write-Color -Text "OneDrive Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "OneDrive Sync Failed" -Color DarkRed -LinesAfter 1
+rclone --exclude-from=d:\files-exc.txt copy 'D:\OneDrive' 'G-Drive:/Cloud/OneDrive' --fast-list --checkers=16 --transfers=16 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 --create-empty-src-dirs -u -P -v && Write-Color -Text "OneDrive Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "OneDrive Sync Failed" -Color DarkRed -LinesAfter 1
 # d:\apps
 Write-Color -Text "Syncing Apps" -Color Yellow -LinesAfter 1
 rclone --exclude-from=d:\apps-exc.txt sync 'D:\Apps' 'G-Drive:/Garbage/Apps' --fast-list --track-renames --checkers=16 --transfers=16 --stats=1s --drive-chunk-size=128M --tpslimit=10 --tpslimit-burst=10 -u -P -v && Write-Color -Text "G50 Apps Sync Completed" -Color Green -LinesAfter 1 || Write-Color -Text "G50 Apps Sync Failed" -Color DarkRed -LinesAfter 1
