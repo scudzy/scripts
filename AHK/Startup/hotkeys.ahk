@@ -20,7 +20,8 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #j::Run, C:\Program Files\Mozilla Thunderbird\thunderbird.exe
 #k::Run, D:\Apps\Portable\KeePass\KeePass.exe
 #n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
-#o::Run, osk.exe
+;#o::Run, osk.exe
+#o::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 #s::Run, C:\Program Files\Everything\Everything.exe
 #t::Run, c:\Users\scudzy\WApps\Windows Terminal.lnk
 #u::Run, c:\users\scudzy\wapps\Microsoft Store.lnk
@@ -28,7 +29,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #w::Run, c:\Users\scudzy\WApps\Weather
 
 ; Apps Launcher [ Ctrl + Alt + Shift + a - z ]
-^!+a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
+;^!+a::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 ^!+b::Run, D:\Apps\Portable\freetube\FreeTube.exe
 ;^!+b::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 ^!+c::Run, c:\Users\scudzy\WApps\Command Prompt.lnk

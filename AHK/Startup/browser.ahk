@@ -24,24 +24,24 @@ Menu, Tray, Icon, D:\IconsPacks\G50\File\Browser\ie.ico
      }
 Return
 
-; Edge Restart [ Alt + Shift + r ]
+; Edge Restart [ Ctrl + Shift + r ]
 #IfWinActive, ahk_class Chrome_WidgetWin_1
-!+r::
+^+r::
     DllCall("Sleep","UInt",1000)
     CoordMode, Mouse, Screen
     Click, 89, 94
 return
 
-; Edge url hotkeys [ Alt + f / r / y ]
+; Edge url hotkeys [ Ctrl + Alt + f / r / y ]
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 OpenURL(u) {
     WinActivate, Program Manager
     Run %u%
     return
     }
-!f::OpenURL("https://feedly.com/i/latest")
-!r::OpenURL("http://www.reddit.com/")
-!y::OpenURL("https://www.youtube.com/")
+^!f::OpenURL("https://feedly.com/i/latest")
+^!r::OpenURL("http://www.reddit.com/")
+^!y::OpenURL("https://www.youtube.com/")
 return
 
 ; Edge Home [ Alt + Home ]
