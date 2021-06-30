@@ -48,7 +48,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 ^!+p::Run, D:\Apps\Portable\PApps\Start.exe
 ^!+q::Run, C:\Program Files\Process Hacker 2\ProcessHacker.exe
 ^!+r::Run, D:\Apps\Portable\Revo.Uninstaller.Pro.4.4.5\RevoUPPort.exe
-^!+s::Run, C:\Program Files (x86)\KC Softwares\SUMo\SUMo.exe
+^!+s::Run, C:\Users\scudzy\scoop\apps\sumo\current\SUMo.exe
 ^!+t::Run, D:\Apps\Portable\putty\PUTTY.EXE
 ;^!+u::Run, C:\Program Files\Virtual Machine USB Boot\Virtual Machine USB Boot.x64.exe
 ^!+v::Run, C:\Program Files\VideoLAN\VLC\vlc.exe
