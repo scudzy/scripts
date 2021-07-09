@@ -38,8 +38,18 @@ function gitlgg { git log --graph --abbrev-commit --decorate --date=relative --f
 function seno { Get-CimInstance win32_bios | select SerialNumber }
 function bios { Get-CimInstance win32_bios | format-list * }
 function ip3 { iperf3 -s 192.168.1.120 }
+
+# Package Manager
 function scomp { sudo scoop update oh-my-posh }
 function scu { sudo scoop update @Args }
+function sci { sudo scoop install @Args }
+function scun { sudo scoop uninstall @Args }
+function wgu { winget upgrade @Args }
+function wgi { winget install @Args }
+function wgun { winget uninstall @Args }
+function listchoco { choco list --local }
+function listscoop { sudo scoop list }
+
 function gcma { Get-Command -CommandType All -Module @Args }
 function gcmaa { Get-Command -CommandType Alias -Module @Args }
 function gcmf { Get-Command -CommandType Function -Module @Args }
@@ -52,7 +62,7 @@ function path {$ENV:PATH}                                                   # Pa
 function cd32 { Set-Location C:\Windows\System32 }                          # CD to System32 Directory
 function src { . $profile }                                                 # Reload PowerShell
 function chocou { choco upgrade all -y }
-function csu { powershell.exe -Command { choco upgrade all -y; sudo scoop update; sudo scoop status } }
+function csuw { powershell.exe -Command { choco upgrade all -y; sudo scoop update; sudo scoop status; winget upgrade } }
 function ddown {Set-Location D:\Downloads\}
 function cdst3 { Set-Location 'C:\Users\scudzy\AppData\Roaming\Sublime Text 3\Packages\User\' }
 function notes { Set-Location D:\Github\Notes\ }
