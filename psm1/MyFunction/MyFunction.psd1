@@ -152,7 +152,7 @@ FunctionsToExport = @(
     'cd32',
     'src',
     'chocou',
-    'csu',
+    'csuw',
     'ddown',
     'cdst3',
     'notes',
@@ -179,7 +179,8 @@ FunctionsToExport = @(
     'Send-ToRecycleBin',
     'takeover',
     'Clear-RecycleBin',
-    'efunc'
+    'efunc',
+    'cc'
 )
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.

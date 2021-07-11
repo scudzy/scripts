@@ -1,6 +1,8 @@
 ﻿# Function
 function ivsa { Invoke-ScriptAnalyzer -Path . -Recurse }
 function lg { lazygit }
+function ompv { oh-my-posh.exe -version }
+
 function ll { Get-ChildItem -Path . @Args }
 function lld { Get-ChildItem -Directory @Args }
 function lda { Get-ChildItem -Directory -Force @Args }
@@ -9,13 +11,14 @@ function lfa { Get-ChildItem -File -Force @Args }
 function lsa { Get-ChildItem -Path . -Force @Args }
 function lsm { Get-ChildItem | sort -property LastWriteTime }
 function dirall { Get-ChildItem -Recurse | ?{ $_.PSIsContainer } | Select-Object FullName }
-function ompv { oh-my-posh.exe -version }
+
 function dieth { Get-NetAdapter | Disable-NetAdapter -Confirm:$false }
 function eneth { Get-NetAdapter | Enable-NetAdapter -Confirm:$false }
-function speed { speedtest --selection-details -v }
+
 function gfunc { Get-ChildItem function:\ }
 function galias { Get-ChildItem alias:\ }
-function pyupg { pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_} }
+
+# Git
 function gst { git status }
 function gad { git add @Args }
 function gaa { git add -all }
@@ -35,9 +38,11 @@ function gitf { git fetch }
 function gitlog { git log --pretty=oneline }
 function gitlg { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit }
 function gitlgg { git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(r) —— %C(bold blue)%an%C(r): %C(white)%s%C(r) %C(dim white) %C(bold green)(%ar)%C(r) %C(bold yellow)%d%C(r)' --all }
+
+# Sys info
 function seno { Get-CimInstance win32_bios | select SerialNumber }
 function bios { Get-CimInstance win32_bios | format-list * }
-function ip3 { iperf3 -s 192.168.1.120 }
+
 
 # Package Manager
 function scomp { sudo scoop update oh-my-posh }
@@ -49,28 +54,43 @@ function wgi { winget install @Args }
 function wgun { winget uninstall @Args }
 function listchoco { choco list --local }
 function listscoop { sudo scoop list }
+function chocou { choco upgrade all -y }
+function csuw { powershell.exe -Command { choco upgrade all -y; sudo scoop update; sudo scoop status; winget upgrade } }
 
+# PowerShell
 function gcma { Get-Command -CommandType All -Module @Args }
 function gcmaa { Get-Command -CommandType Alias -Module @Args }
 function gcmf { Get-Command -CommandType Function -Module @Args }
 function gcmc { Get-Command -CommandType Cmdlet -Module @Args }
-function vw { pyvoc -w @Args }
 function bg { Start-Process -NoNewWindow @Args }
-function profiless { $PROFILE | Select-Object *Host* | Format-List }
-function yga { yarn global add @Args }
 function path {$ENV:PATH}                                                   # Path shortcut
-function cd32 { Set-Location C:\Windows\System32 }                          # CD to System32 Directory
 function src { . $profile }                                                 # Reload PowerShell
-function chocou { choco upgrade all -y }
-function csuw { powershell.exe -Command { choco upgrade all -y; sudo scoop update; sudo scoop status; winget upgrade } }
+function profiless { $PROFILE | Select-Object *Host* | Format-List }
+
+# Python
+function vw { pyvoc -w @Args }
+function cc { currency_converter @Args }
+function pyupg { pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_} }
+
+# Set-Location
+function cd32 { Set-Location C:\Windows\System32 }                          # CD to System32 Directory
+
 function ddown {Set-Location D:\Downloads\}
 function cdst3 { Set-Location 'C:\Users\scudzy\AppData\Roaming\Sublime Text 3\Packages\User\' }
 function notes { Set-Location D:\Github\Notes\ }
 function scripts { Set-Location D:\Github\Scripts\ }
+
+# Net
 function wttr { Invoke-RestMethod 'http://wttr.in/Kuantan, Malaysia?0qTm' }
 function wttr4 { Invoke-RestMethod 'http://wttr.in/Kuantan, Malaysia?m0Fq&format=4' }
+function yga { yarn global add @Args }
+function speed { speedtest --selection-details -v }
+function ip3 { iperf3 -s 192.168.1.120 }
+
+# WSL2
 function wsls { wsl -e genie -u; wsl --shutdown }
 function wslreboot { Get-Service LxssManager | Restart-Service }
+
 function takeover { powershell.exe -executionpolicy bypass -file "D:\Github\Scripts\ps1\TakeOwnership.ps1" -FilesFolders $Args }
 
 function ffind ($string) {
