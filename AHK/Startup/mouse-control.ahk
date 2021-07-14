@@ -62,3 +62,9 @@ return
 XButton1::
 XButton2::^Space      ; Selected as reference
 return
+
+; Stremio
+#IfWinActive, ahk_class Qt5152QWindowOwnDCIcon
+XButton1::Left          ; FF 20 sec
+XButton2::Right         ; RW 20 sec
+return
