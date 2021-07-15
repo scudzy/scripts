@@ -61,7 +61,7 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 ; Launcher F1 - F12
 ^+F1::Run, C:\Program Files (x86)\Dropbox\Client\Dropbox.exe /home
 ^+F2::Run, C:\Users\scudzy\AppData\Local\Microsoft\OneDrive\OneDrive.exe
-^+F3::Run, C:\Program Files\Google\Drive File Stream\48.0.13.0\GoogleDriveFS.exe
+^+F3::Run, C:\Program Files\Google\Drive File Stream\49.0.8.0\GoogleDriveFS.exe
 ;F4::
 ;F5::
 ;F6::
