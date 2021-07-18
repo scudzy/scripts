@@ -19,11 +19,11 @@ Menu, Tray, Icon, D:\IconsPacks\G50\Lumicons\System\service.ico
 #f::Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
 #j::Run, C:\Program Files\Mozilla Thunderbird\thunderbird.exe
 #k::Run, D:\Apps\Portable\KeePass\KeePass.exe
-#n::Run, C:\Program Files\Sublime Text 3\sublime_text.exe
+#n::Run, C:\Program Files\Sublime Text\sublime_text.exe
 ;#o::Run, osk.exe
 #o::Run, C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
 #s::Run, C:\Program Files\Everything\Everything.exe
-#t::Run, c:\Users\scudzy\WApps\Windows Terminal.lnk
+#t::Run, C:\Users\scudzy\WApps\Windows Terminal Preview.lnk
 #u::Run, c:\users\scudzy\wapps\Microsoft Store.lnk
 #v::Run, C:\Users\scudzy\scoop\apps\vscode\current\Code.exe
 #w::Run, c:\Users\scudzy\WApps\Weather
