@@ -3,3 +3,5 @@ Stop-Process -Name JackettTray
 Stop-Process -Name systrayhelper
 Stop-Process -Name stremio
 Stop-Process -Name engine
+Start-Sleep -Seconds 10
+Get-Service "Sonarr" | Stop-Service
